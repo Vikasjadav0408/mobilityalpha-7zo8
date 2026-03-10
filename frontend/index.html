@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaaS Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mobility-as-a-Service (MaaS) Demo</h1>
+    <p>Search trips and book rides in a single platform.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Search trips</h2>
+      <form id="search-form">
+        <label>
+          Origin
+          <input type="text" id="origin" placeholder="e.g. Downtown" />
+        </label>
+        <label>
+          Destination
+          <input type="text" id="destination" placeholder="e.g. Airport" />
+        </label>
+        <label>
+          Mode
+          <select id="mode"></select>
+        </label>
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="trips"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Book a ride</h2>
+      <form id="booking-form">
+        <label>
+          Name
+          <input type="text" id="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Trip ID
+          <input type="number" id="tripId" required />
+        </label>
+        <button type="submit">Book</button>
+      </form>
+
+      <div id="booking-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Backend API expected at <code>/api</code> (Flask server).</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
